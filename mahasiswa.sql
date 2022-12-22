@@ -6,7 +6,7 @@ CREATE TABLE jurusan (
     nama VARCHAR(50) NOT NULL
 );
 
-insert into jurusan (kode, nama) values ("PTIF", "Pendidikan Teknik Informatika");
+
 
 CREATE TABLE mahasiswa (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -20,7 +20,7 @@ CREATE TABLE mahasiswa (
     FOREIGN KEY (id_jurusan) REFERENCES jurusan(id)
 );
 
-insert into mahasiswa (id_jurusan, nim, nama, jenis_kelamin, tempat_lahir, tanggal_lahir, alamat) value (1, "20220001", "Susi", "perempuan", "Malang", "2000-12-10", "Jl. Merbabu 10");
+
 
 CREATE TABLE mahasiswa_test (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -33,3 +33,14 @@ CREATE TABLE mahasiswa_test (
     alamat VARCHAR(255) NOT NULL,
     FOREIGN KEY (id_jurusan) REFERENCES jurusan(id)
 );
+ insert jurusan 
+insert into jurusan (kode, nama) values ("PTIF", "Pendidikan Teknik Informatika");
+
+-- insert mahasiswa
+insert into mahasiswa (id_jurusan, nim, nama, jenis_kelamin, tempat_lahir, tanggal_lahir, alamat) value (1, "20220001", "Susi", "perempuan", "Malang", "2000-12-10", "Jl. Merbabu 10");
+
+-- update mahasiswa
+update mahasiswa set tempat_lahir = "jakarta";
+
+-- delete mahasiswa
+delete from mahasiswa were id = 1;
